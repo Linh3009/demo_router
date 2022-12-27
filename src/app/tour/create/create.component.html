@@ -1,0 +1,19 @@
+<h1>Thêm tour</h1>
+<div class="mb-3">
+  <label class="form-label">Tên tour</label><br>
+  <input type="text" id="name" [(ngModel)]="tour.name">
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Giá</label><br>
+  <input type="text" id="price" [(ngModel)]="tour.price">
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Mô tả</label><br>
+  <input type="text" id="describe" [(ngModel)]="tour.describe">
+</div>
+
+<div>
+  <button class="btn btn-success" (click)="create()">Create</button>
+</div>
