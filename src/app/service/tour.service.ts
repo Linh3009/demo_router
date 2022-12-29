@@ -7,6 +7,7 @@ import {Tour} from "../model/Tour";
 export class TourService {
 
   tours: Tour = new Tour(0, "", 0, "")
+
   tourList: Tour[] = [new Tour(1, "Sapa", 2000000, "Giới thiệu: Sapa lạnh vl"),
     new Tour(2, "Ninh Bình", 1600000, "Giới thiệu: Sapa lạnh vl"),
     new Tour(3, "Hà Giang", 2000000, "Giới thiệu: Sapa lạnh vl"),
@@ -30,9 +31,11 @@ export class TourService {
     }
   }
 
-  showEdit(tour: Tour): void {
-    this.tours = new Tour(tour.id,tour.name,tour.price,tour.describe)
-  }
+  // showEdit(tour: Tour): void {
+  //   this.tours = new Tour(tour.id,tour.name,tour.price,tour.describe)
+  // }
+
+
 
   edit():void{
     for (let i = 0; i < this.tourList.length; i++) {
@@ -40,7 +43,6 @@ export class TourService {
         this.tourList[i] = this.tours
       }
     }
-    this.restart()
   }
 
 
@@ -52,9 +54,6 @@ export class TourService {
     }
   }
 
-  restart():void{
-    this.tours = new Tour(0, "", 0, "")
-  }
 
   showTour(i : number):void{
     this.tours = this.tourList[i];

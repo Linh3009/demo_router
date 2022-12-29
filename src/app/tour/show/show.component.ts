@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TourService} from "../../service/tour.service";
+import {Tour} from "../../model/Tour";
 
 @Component({
   selector: 'app-show',
@@ -7,6 +8,8 @@ import {TourService} from "../../service/tour.service";
   styleUrls: ['./show.component.css']
 })
 export class ShowComponent implements OnInit{
+  tour: Tour = new Tour(0, "", 0, "")
+
   constructor(public tourService: TourService) {
   }
   ngOnInit(): void {
@@ -14,4 +17,6 @@ export class ShowComponent implements OnInit{
   delete(id:number){
     this.tourService.delete(id);
   }
+
+
 }

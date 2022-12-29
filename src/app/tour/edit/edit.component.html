@@ -1,1 +1,22 @@
-<p>edit works!</p>
+<h1>Sửa tour</h1>
+
+<div class="mb-3">
+  <label class="form-label">Tên tour</label><br>
+  <input type="text" id="name" [(ngModel)]="tourService.tours.name">
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Giá</label><br>
+  <input type="text" id="price" [(ngModel)]="tourService.tours.price">
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Mô tả</label><br>
+  <input type="text" id="describe" [(ngModel)]="tourService.tours.describe">
+</div>
+
+<div>
+  <button class="btn btn-success" (click)="edit()">Edit</button>
+  <br><br>
+  <a class="btn btn-info" routerLink="/show">Danh sách</a>
+</div>

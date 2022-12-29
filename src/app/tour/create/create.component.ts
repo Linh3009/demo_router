@@ -11,7 +11,6 @@ import {Router} from "@angular/router";
 export class CreateComponent implements OnInit{
   tour: Tour = new Tour(0, "", 0, "")
 
-
   constructor(public tourService:TourService, private router:Router) {
   }
 
